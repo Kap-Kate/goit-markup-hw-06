@@ -379,12 +379,15 @@
         <div>
           <h3 class="join">Підпишіться на розсилку</h3>
           <div class="sign-up">
-            <label class="footer-input"><input class="input-footer" type="email" name="email" placeholder="E-mail" /></label>
-              <button type="button" class="sign-up-button">Підписатися
-             <svg class="icon" width="24px" height="24px">
-              <use href="./img/icons.svg#icon-send"></use>
-            </svg>
-          </button>
+            <label class="footer-input"
+              ><input class="input-footer" type="email" name="email" placeholder="E-mail"
+            /></label>
+            <button type="button" class="sign-up-button">
+              Підписатися
+              <svg class="icon" width="24px" height="24px">
+                <use href="./img/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -397,6 +400,31 @@
             <use href="./img/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <form class="modal-form">
+          <label class="modal-input"
+            >Ім'я
+            <input class="input-modal" type="text" name="name" />
+          </label>
+          <label class="modal-input"> Телефон <input class="input-modal" type="tel" name="phone-number" /></label>
+          <label class="modal-input"
+            >Пошта
+            <input class="input-modal" type="email" name="email" />
+          </label>
+          <label class="modal-input comment"
+            >Коментар
+            <textarea
+              class="input-modal comment"
+              name="feedback"
+              rows="3"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+          <label>
+            <input type="checkbox" name="agree" value="agree">Погоджуюся з розсилкою та приймаю Умови договору
+          </label>
+        </form>
+        <button class="send-button" type="button">Відправити</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
