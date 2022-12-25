@@ -768,7 +768,7 @@ img {
   outline: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition-property: border;
-  transition-duration: 2050ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-modal.comment {
@@ -779,6 +779,9 @@ img {
 .input-modal:hover,
 .input-modal:focus {
   border-color: var(--color-akcent);
+}
+.input-modal:focus +.icon-modal {
+  color: var(--color-akcent)
 }
 .modal-input.comment {
   height: 138px;
