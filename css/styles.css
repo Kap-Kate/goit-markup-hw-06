@@ -605,6 +605,7 @@ img {
 }
 .container.footer-box {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
 }
 .social {
@@ -625,9 +626,13 @@ img {
   border-radius: 4px;
   border-color: var(--color-akcent);
   cursor: pointer;
-  /* transition-property: background-color, border-radius;
+  transition-property: box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sign-up-button:hover,
+.sign-up-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .sign-up-button .icon {
   fill: currentColor;
@@ -687,12 +692,16 @@ img {
   position: absolute;
   width: 30px;
   height: 30px;
+  color: var(--color-logo);
   background-color: var(--background-color-primary);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   top: 8px;
   right: 8px;
   cursor: pointer;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
   display: flex;
@@ -700,6 +709,14 @@ img {
   align-items: center;
   width: 100%;
   height: 100%;
+  fill: currentColor;
+}
+.modal-button:hover {
+  color: var(--color-akcent);
+}
+.modal-button:focus {
+  color: var(--color-akcent);
+  outline: 0;
 }
 .modal-title {
   position: absolute;
@@ -721,39 +738,63 @@ img {
   height: 342px;
 }
 .modal-input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  width: 448px;
-  height: 58px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
 }
-.modal-input.comment {
+.modal-input .comment {
   height: 138px;
+  resize: none;
+}
+.modal-icon {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  /* border-radius: 4px; */
+  /* border: 1px solid rgba(33, 33, 33, 0.2); */
+  /* transition-property: border;
+  transition-duration: 2050ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .input-modal {
   width: 100%;
-  height: 40px;
+  height: 100%;
+  border: none;
+  padding-left: 40px;
+  padding-right: 12px;
   border-radius: 4px;
+  outline: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition-property: border;
   transition-duration: 2050ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-modal.comment {
-  height: 100%;
   padding: 16px 12px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  transition-property: border;
-  transition-duration: 2050ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-modal:hover,
 .input-modal:focus {
   border-color: var(--color-akcent);
 }
 .modal-input.comment {
+  height: 138px;
   margin-bottom: 20px;
+}
+.icon-modal {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  transform: translateY(50%);
+  color: var(--color-text-primary);
+}
+.icon-modal .icon {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 .send-button {
   position: absolute;
@@ -767,15 +808,22 @@ img {
   padding: 10px 52px;
   border-radius: 4px;
   border: 1px solid var(--color-akcent);
+  transition-property: box-shadow, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
+.send-button:hover,
+.send-button:focus {
+  background-color: var(--background-color-akcent-secondary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: 0;
+}
 .text-agree {
+  display: inline-block;
   color: var(--color-text-secondary);
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   margin-left: 8.38px;
 }
@@ -783,3 +831,5 @@ img {
   color: var(--color-akcent);
   text-decoration: solid;
 }
+
+
