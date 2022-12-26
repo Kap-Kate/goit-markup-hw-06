@@ -376,7 +376,7 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form">
+        <form name="join-form" class="footer-form" autocomplete="on">
           <h3 class="join">Підпишіться на розсилку</h3>
           <div class="sign-up">
             <label class="footer-input"
@@ -436,20 +436,19 @@
           <label class="modal-input comment"
             >Коментар
             <textarea
-              class="input-modal comment"
+              class="input-modal text"
               name="feedback"
-              rows="3"
               placeholder="Введіть текст"
             ></textarea>
           </label>
-          <label>
-            <input type="checkbox" name="agree" value="agree" />
-            <div class="text-agree">
-              Погоджуюся з розсилкою та приймаю <a href="#" class="link-agree">Умови договору</a>
-            </div>
+          <label class="text-agree">
+            <input class="checkbox" type="checkbox" name="mailing"/>
+            <span class="icon-agree"></span>
+            Погоджуюся з розсилкою та приймаю<a href="#" class="link-agree">Умови договору</a>
+            
           </label>
+          <button type="submit" class="send-button">Відправити</button>
         </form>
-        <button class="send-button" type="submit">Відправити</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
